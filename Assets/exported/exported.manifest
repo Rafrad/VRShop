@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 681478352
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: productasset/vase1
+      Dependencies: {}
+    Info_1:
+      Name: radio
+      Dependencies: {}
+    Info_2:
+      Name: ancientbook
+      Dependencies: {}
+    Info_3:
+      Name: ancientvase
+      Dependencies: {}

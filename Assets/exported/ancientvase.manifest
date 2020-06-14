@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 2627307258
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4ea0940316eb53257362f291829f63fd
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 556defa0e390da57e766888413f32c85
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 087b4da43a05d684eb127d0279da5760, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8d89de47243297c44810917cedcf69bc, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/products/ancientVase.prefab
+Dependencies: []

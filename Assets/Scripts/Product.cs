@@ -74,7 +74,7 @@ public class Product : MonoBehaviour
             upMove = true;
         var factor = upMove ? 1f : -1f;
         transform.position = new Vector3(currentPos.x, factor * verticalSpeed + transform.position.y, currentPos.z);
-        transform.Rotate(new Vector3(0, 0, rotationSpeed));
+        //transform.Rotate(new Vector3(0, 0, rotationSpeed));
     }
 
     public void Grab()

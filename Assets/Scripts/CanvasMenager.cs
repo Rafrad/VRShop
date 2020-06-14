@@ -34,6 +34,7 @@ public class CanvasMenager : MonoBehaviour
         nameText = descriptionGameObject.transform.GetChild(1).GetComponent<Text>();
 
         basketText = basketGameObject.transform.GetChild(0).GetComponent<Text>();
+        Debug.Log("You clikc thins");
     }
 
     private void Update()
@@ -69,4 +70,16 @@ public class CanvasMenager : MonoBehaviour
         basketText.text = basketList;
     }
 
+    public void ClickBasketButtonHandler()
+    {
+        Debug.Log("You clikc thins");
+    }
+    public void ClickProductsButtonHandler()
+    {
+
+    }
+    public void ClickBuyButtonHandler()
+    {
+
+    }
 }

@@ -6,24 +6,46 @@ using UnityEngine;
 public class ProductManager : MonoBehaviour
 {
     public CanvasMenager CanvasMenager;
-    private List<Product> products;
+    private List<Product> hotProducts;
+    private VrShopHttpClient vrShopHttpClient;
+    private static List<Vector3> locationHotProduct;
+
+    private void Awake()
+    {
+        vrShopHttpClient = new VrShopHttpClient();
+        locationHotProduct = new List<Vector3>()
+        {
+            new Vector3(8.75f, 3, 3.5f),
+            new Vector3(8.75f, 3,-2.5f),
+        };
+    }
 
     void Start()
     {
-        products = new List<Product>();
-        for(var i =0; i < this.transform.childCount; i++)
-            products.Add(this.transform.GetChild(0).GetComponent<Product>());
-        MockProductDetail();
+        hotProducts = new List<Product>();
+        StartCoroutine(GetHotProducts());
     }
-    private void MockProductDetail()
+
+    private IEnumerator GetHotProducts()
     {
-        products[0].ProductDetail = new ProductDetail()
+        yield return vrShopHttpClient.GetProducts(0, SpawnHotObject);
+    }
+
+    private void SpawnHotObject(List<ProductDetail> productsDetails)
+    {
+        var i = 0;
+        foreach (var productDetail in productsDetails)
         {
-            id = "A",
-            Name = "Antic Vase",
-            Description = "Beatifull vase",
-            Money = 12.23M
-        };
+            var pos = locationHotProduct[i];
+            StartCoroutine(vrShopHttpClient.DownloadGameObject(productDetail, productGameObject =>
+            {
+                Instantiate(productGameObject, pos, Quaternion.identity);
+                var product = productGameObject.GetComponent<Product>();
+                product.ProductDetail = productDetail;
+                hotProducts.Add(product);
+            }));
+            i++;
+        }
     }
     public void SelectProduct(Product product, Transform transform)
     {

@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 3507338504
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0ceef039695967ee9ad8961ba4fc8731
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: d4072095ae4ddccd21b3b9c855d4d933
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 087b4da43a05d684eb127d0279da5760, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8d89de47243297c44810917cedcf69bc, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/products/AncientBook.prefab
+Dependencies: []

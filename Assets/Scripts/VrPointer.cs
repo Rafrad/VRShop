@@ -48,7 +48,7 @@ public class VrPointer : MonoBehaviour
         if (hit.transform.gameObject.CompareTag("Product"))
         {
             var product = hit.transform.GetComponent<Product>();
-            Debug.Log($"hited product {product.ProductDetail.id}");
+            //Debug.Log($"hited product {product.ProductDetail.Id}");
             productManager.SelectProduct(product, Player.transform);
         }
     }
