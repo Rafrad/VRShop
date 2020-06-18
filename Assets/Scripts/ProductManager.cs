@@ -39,8 +39,8 @@ public class ProductManager : MonoBehaviour
             var pos = locationHotProduct[i];
             StartCoroutine(vrShopHttpClient.DownloadGameObject(productDetail, productGameObject =>
             {
-                Instantiate(productGameObject, pos, Quaternion.identity);
-                var product = productGameObject.GetComponent<Product>();
+                var newCreatedGameObject = Instantiate(productGameObject, pos, Quaternion.identity);
+                var product = newCreatedGameObject.GetComponent<Product>();
                 product.ProductDetail = productDetail;
                 hotProducts.Add(product);
             }));

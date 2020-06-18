@@ -21,7 +21,6 @@ public class Product : MonoBehaviour
 
     public ProductDetail ProductDetail { get; set; }
 
-
     private void Start()
     {
         initPos = transform.position;
